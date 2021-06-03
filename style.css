@@ -1,1 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway&display=swap");
+
+:root {
+  --nav: #161b22;
+  --text: #e5e5e5;
+  --text-select: #58a6ff;
+
+  --body: #0d1117;
+  --box: #2f333a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Raleway", sans-serif;
+  color: var(--text);
+}
+
+body {
+  background: var(--body);
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+/* ======= Barra de Navegação */
+
+header {
+  width: 100vw;
+}
+
+nav {
+  width: 100vw;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--nav);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 10px 20px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: var(--box);
+  border-radius: 5px;
+  color: var(--text-select);
+  font-size: 18px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--text-select);
+  font-size: 18px;
+}
+/* ======= Fim da Barra de Navegação */
+
+/* ======= Modal 01 - Bio */
+h1 {
+  margin: 40px 0 10px 0;
+  color: var(--text-select);
+
+  font-size: 32px;
+
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.box > h2 {
+  margin: 0px 0px 10px;
+}
+
+.box {
+  width: 500px;
+
+  margin: auto;
+  padding: 20px;
+
+  border-radius: 5px;
+  background: var(--box);
+}
+
+.box p {
+}
+
+/* ======= Fim do Header */
+
+/* ======= Modal */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.post {
+  height: 300px;
+  width: 350px;
+
+  border-radius: 10px;
+
+  background: #2f333a;
+  margin: 0 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.tittle {
+  padding: 0 20px;
+}
+
+.description {
+  position: relative;
+  margin: 0 20px;
+}
+
+#modal_home h2 {
+  font-size: 18px;
+  padding: 5px 0;
+
+  color: #5a6270;
+  font-weight: 600;
+
+  overflow: hidden;
+}
+
+.description p {
+  font-size: 16px;
+  font-weight: 400;
+
+  padding: 10px 0;
+
+  color: #c4c4c4;
+}
+
+small {
+  color: #c4c4c4;
+}
+
+.header img {
+  border-radius: 50%;
+}
+
+/* =======  Projectos ======= */
+/* #modal_design {
+  height: 100vh;
+  width: 100vw;
+}
+ */
+#projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  width: 100vw;
+}
+
+#projects a {
+  font-style: none;
+  text-decoration: none;
+}
+
+.project_individual {
+  cursor: pointer;
+  width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--box);
+
+  margin: 10px 20px 36px;
+}
+
+.project-image {
+  width: 100%;
+  padding-bottom: 55%;
+  height: 0;
+  overflow: hidden;
+}
+
+.project-image-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  padding: 12px 18px;
+}
+
+.project-text-name {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  font-size: 20px;
+
+  letter-spacing: 1px;
+}
+
+.project-text-summary {
+  overflow: hidden;
+  width: 100%;
+  color: var(--text);
+
+  font-size: 14px;
+  font-weight: 400;
+
+  margin-bottom: 12px;
+}
+
+/* Animação */
+.project_individual {
+  opacity: 0.5;
+  transition: 0.2s all ease-in-out;
+}
+
+.project_individual:hover {
+  opacity: 1;
+  width: calc(350px + 10px);
+}
+/* Fim da Animação */
+
+/* ======= Fim dos projetos ====== */
+
+@media (max-width: 900px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  html,
+  body {
+    height: 100vh;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  .box {
+    width: 30rem;
+  }
+
+  .card,
+  #projects {
+    position: relative;
+    display: block;
+  }
+
+  .post,
+  .project_individual {
+    margin: 20px auto;
+  }
+
+  .project_individual {
+  }
+}
 
