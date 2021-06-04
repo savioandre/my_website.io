@@ -7,6 +7,8 @@
 
   --body: #0d1117;
   --box: #2f333a;
+
+  --svg: #28203e;
 }
 
 * {
@@ -15,7 +17,6 @@
   box-sizing: border-box;
 
   font-family: "Raleway", sans-serif;
-  color: var(--text);
 }
 
 body {
@@ -24,17 +25,17 @@ body {
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 /* ======= Barra de Navegação */
 
 header {
-  width: 100vw;
+  width: 100%;
 }
 
-nav {
-  width: 100vw;
+#menu nav {
+  width: 100%;
   height: 60px;
 
   display: flex;
@@ -44,33 +45,29 @@ nav {
   background: var(--nav);
 }
 
-nav ul {
+#menu nav ul {
   display: flex;
   align-items: center;
 }
 
-nav ul li {
-  padding: 10px 20px;
+#menu nav ul li {
   margin-left: 10px;
   list-style: none;
 }
 
-nav ul li a {
+#menu nav ul li a {
+  display: block;
+  padding: 10px 20px;
+
   color: var(--text);
   text-decoration: none;
 }
 
-nav ul li:hover {
+#menu nav ul li a.active,
+#menu nav ul li a:hover {
   background: var(--box);
   border-radius: 5px;
   color: var(--text-select);
-  font-size: 18px;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  color: var(--text-select);
-  font-size: 18px;
 }
 /* ======= Fim da Barra de Navegação */
 
@@ -90,6 +87,8 @@ h1 {
 }
 
 .box {
+  color: var(--text);
+
   width: 500px;
 
   margin: auto;
@@ -97,9 +96,6 @@ h1 {
 
   border-radius: 5px;
   background: var(--box);
-}
-
-.box p {
 }
 
 /* ======= Fim do Header */
@@ -179,7 +175,7 @@ small {
   justify-content: center;
 
   margin: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 #projects a {
@@ -211,6 +207,7 @@ small {
 
 .project-text {
   padding: 12px 18px;
+  color: var(--text);
 }
 
 .project-text-name {
@@ -240,12 +237,75 @@ small {
 
 .project_individual:hover {
   opacity: 1;
-  width: calc(350px + 10px);
+  transform: translateY(-4px);
 }
 /* Fim da Animação */
 
-/* ======= Fim dos projetos ====== */
+/* Footer */
+footer {
+  background: #050505;
+  width: 100%;
 
+  overflow: hidden;
+}
+#contact {
+  text-align: center;
+}
+
+#contact h2 {
+  margin: 20px 10px 0;
+  color: #fff;
+}
+
+/* ===== Navegação ===== */
+#nav_footer {
+  margin: 5px;
+}
+
+#nav_footer nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+}
+
+#nav_footer nav ul li {
+  margin: 5px;
+}
+
+#nav_footer nav ul li a svg {
+  background: #121214;
+  border-radius: 5px;
+
+  box-sizing: content-box;
+  padding: 12px;
+}
+
+.icon_media {
+  color: var(--svg);
+}
+
+#nav_footer nav ul li a .icon_media:hover {
+  color: #6833e4;
+  transform: translateY(-4px);
+}
+
+/* ===== Copyright ===== */
+#copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  width: 100%;
+  margin: 20px 0;
+}
+/* ==== Fim ==== */
+/* Fim do Footer */
+
+/* ======= Fim dos projetos ====== */
 @media (max-width: 900px) {
   html {
     font-size: 62.5%;
@@ -278,4 +338,3 @@ small {
   .project_individual {
   }
 }
-
